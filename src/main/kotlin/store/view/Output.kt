@@ -8,7 +8,8 @@ object Output {
         val productList = ProductList()
         println(productList.splitProduct().joinToString("\n"))// Product 물품 출력
     }
-    fun printPurchaseMessage(){
+
+    fun printPurchaseMessage() {
         println("구매하실 상품명과 수량을 입력해주세요. (예: [사이다-2],[감자칩-1])")
     }
 }

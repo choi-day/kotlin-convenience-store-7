@@ -1,6 +1,5 @@
 package store.controller
 
-import store.model.ProductList
 import store.view.Input
 import store.view.Output
 
