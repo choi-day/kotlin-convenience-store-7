@@ -7,4 +7,3 @@ class ProductInfo(val name :String, var price :Int){
         return decimalFormat.format(price)
     }
 }
-

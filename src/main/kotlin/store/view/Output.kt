@@ -4,8 +4,7 @@ import store.model.ProductList
 
 object Output {
     fun printGreet() = println("안녕하세요. W편의점입니다.\n현재 보유하고 있는 상품입니다.")
-    fun printProductList() {
-        val productList = ProductList()
+    fun printProductList(productList: ProductList) {
         println(productList.splitProduct().joinToString("\n"))// Product 물품 출력
     }
 
