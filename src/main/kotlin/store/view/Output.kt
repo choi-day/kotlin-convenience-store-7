@@ -1,11 +1,16 @@
 package store.view
 
 import store.model.Product
+import store.model.Quantity
 
 object Output {
     fun printGreet() = println("안녕하세요. W편의점입니다.\n현재 보유하고 있는 상품입니다.")
-    fun printProductList(productList: List<Product>) {
-        println(productList.joinToString("\n"))// Product 물품 출력
+    fun printProductList(name: String, price: String, quantity: String, promotion: String) {
+        print("- ${name} ${price}원 ")
+        if (quantity == "0") println("재고 없음 ")
+        else print("${quantity}개 ")
+        if(promotion == "null") println("")
+        else println(promotion)
     }
 
     fun printPurchaseMessage() {

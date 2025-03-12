@@ -8,7 +8,7 @@ class ProductController {
     fun openStore() {
         Output.printGreet()
         val productSplitList = ProductList().splitProductList()
-        Output.printProductList(productSplitList)
+        productSplitList.forEach { it -> Output.printProductList(it.productInfo.name, it.productInfo.getDecimalFormat(), it.quantity.quantity, it.promotion.promotion)}
         getPurchaseList()
     }
 
