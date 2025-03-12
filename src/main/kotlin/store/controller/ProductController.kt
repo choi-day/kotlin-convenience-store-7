@@ -6,9 +6,9 @@ import store.view.Output
 
 class ProductController {
     fun openStore() {
-        val productList = ProductList()
         Output.printGreet()
-        Output.printProductList(productList)
+        val productSplitList = ProductList().splitProductList()
+        Output.printProductList(productSplitList)
         getPurchaseList()
     }
 
