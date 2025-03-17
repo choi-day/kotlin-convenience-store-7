@@ -6,4 +6,8 @@ object Input {
     fun inputPurchaseList(): String {
         return Console.readLine()
     }
+
+    fun inputAddPurchase(): String{
+        return Console.readLine()
+    }
 }

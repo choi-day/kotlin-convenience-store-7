@@ -17,4 +17,12 @@ class ProductList {
         val productSplitList = productList.subList(1,productList.size).map{Product.allocateProduct(it)}
         return productSplitList
     }
+
+    fun getPromotionProductList(): List<Product> {
+        return getProductList().filter{ it.promotion.promotion != "null" }
+    }
+
+    fun getOriginalProductList(): List<Product> {
+        return getProductList().filter{ it.promotion.promotion == "null" }
+    }
 }

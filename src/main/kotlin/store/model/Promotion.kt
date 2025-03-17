@@ -12,4 +12,9 @@ class Promotion(val promotion: String, val buy: Int, val get: Int, val startDate
         return Promotion(promotion, buy, get, startDate, endDate)
         }
     }
+
+    fun checkDate():Boolean {
+        val nowDate = LocalDate.now()
+        return nowDate.isAfter(startDate) && nowDate.isBefore(endDate)
+    }
 }
